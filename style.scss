@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+$Orange: hsl(25, 97%, 53%);
+$Light_Grey: hsl(217, 12%, 63%);
+$Dark_Blue: hsl(213, 19%, 18%);
+$Very_Dark_Blue: hsl(216, 12%, 8%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $Very_Dark_Blue;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    // display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 345px;
+    height: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: linear-gradient($Dark_Blue, hsl(214, 12%, 11%));
+
+    .img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: hsl(213, 19%, 22%);
+
+        img{
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+    }
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: $Light_Grey;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .radioGroup{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        input{
+            appearance: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            opacity: 0.6;
+            border-radius: 50%;
+            padding-top: 13px;
+            padding-left: 16px;
+            font-weight: 700;
+            color: $Light_Grey;
+            background-color: hsl(213, 19%, 22%);
+            
+            &:hover{
+                background-color: $Orange;
+                color: $Very_Dark_Blue;
+                opacity: 1;
+            }
+        }
+
+        input:checked{
+            background-color: white;
+            opacity: 1;
+            color: $Very_Dark_Blue;
+        }
+        
+        input:nth-child(1):after{
+            content: "1";
+        }
+
+        input:nth-child(2):after{
+            content: "2";
+        }
+
+        input:nth-child(3):after{
+            content: "3";
+        }
+
+        input:nth-child(4):after{
+            content: "4";
+        }
+
+        input:nth-child(5):after{
+            content: "5";
+        }
+
+    }
+
+    button{
+        border: none;
+        height: 40px;
+        width: 280px;
+        align-self: center;
+        background-color: $Orange;
+        border-radius: 30px;
+        font-family: "Overpass", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover{
+            background-color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.container2{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 345px;
+    height: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: linear-gradient($Dark_Blue, hsl(214, 12%, 11%));
+
+    img{
+        width: 150px;
+    }
+
+    .rate{
+        background-color: $Dark_Blue;
+        padding: 5px 20px;
+        border-radius: 30px;
+        color: $Orange;
+    }
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: $Light_Grey;
+        text-align: center;
+    }
+}
